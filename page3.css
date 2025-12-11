@@ -1,0 +1,300 @@
+/* 0. Core Full-Page Setup */
+@import url('https://fonts.cdnfonts.com/css/dolce-vita-heavy');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* A professional, clean font */
+    /* Ensure the body takes up 100% of the viewport height (vh) */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    /* Stretch the container to fill the height */
+    background-image: url(last.png);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+/* 1. Main Container (Full Width & Height) */
+.container {
+    display: flex;
+    width: 100vw;
+    /* Take full viewport width */
+    height: 100vh;
+    /* Take full viewport height */
+}
+
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* Stack header on top of content */
+    width: 100vw;
+    height: 100vh;
+    justify-items: center;
+}
+
+.site-header {
+  display: flex;                  /* enable flexbox */
+  justify-content: space-between; /* logo left, button right */
+  align-items: center;            /* vertical centering */
+  padding: 10px 5%;               /* spacing inside header */
+  background-color: rgb(62, 105, 139);
+  opacity: 0.9;
+  font-size: 3vw;
+  font-family: 'Anek Gujarati', sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+
+.logo {
+  font-size: 2.5vw;
+}
+
+
+a {
+  text-decoration: none;   /* no underline */
+  color: inherit;          /* use parent text color */
+  user-select: none;       /* no text highlight */
+}
+
+a:focus,
+a:active {
+  outline: none;           /* no focus outline */
+}
+
+
+/* 2. Left Column Styles (1/3 Width on Desktop) */
+.left-column {
+
+    flex: 1;
+    /* Takes up 1 part */
+    background-color: url(last.png);
+    /* Light background */
+    padding: 5vh 1vw;
+    /* Use viewport units for padding */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center content vertically */
+    min-width: 300px;
+    /* Ensures it doesn't get too squished */
+    /* Align items to the top (start) instead of center for a cleaner look */
+    justify-content: flex-start;
+    /* MODIFIED */
+    padding-top: 10vh;
+    /* Add more padding at the top */
+
+}
+
+.profile-photo {
+
+    width: 60%;
+    height: 70%;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.name {
+    font-size: clamp(24px, 4vw, 36px);
+    /* Responsive font size */
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.1;
+    color: #333;
+}
+
+.title {
+    font-size: clamp(16px, 2vw, 18px);
+    /* Responsive font size */
+    color: #5e5e5e;
+    margin-top: 0px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.custom-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+}
+
+.custom-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* 3. Right Column Styles (2/3 Width on Desktop) */
+.right-column {
+
+    flex: 1;
+    /* Takes up 2 parts (wider) */
+    background-color: #f3f3f3;
+    /* Gray background */
+    opacity: 0.9;
+    color: rgb(31, 28, 28);
+    padding: 5vh 5vw;
+    /* Use viewport units for padding */
+    display: flex;
+    flex-direction: column;
+    /* Aligns content to the start and end of the column */
+    align-items: center;
+    justify-content: space-between;
+
+
+    /* --- KEY CHANGES START HERE --- */
+
+    /* 1. Set a fixed height for the content within the column's flex context */
+    height: 100%;
+    /* Important: This makes the inner content take full height of the 'container' */
+
+    /* 2. Enable vertical scrolling when content exceeds the height */
+    overflow-y: auto;
+
+    /* 3. Optional: Hide horizontal scrollbar if it accidentally appears */
+    overflow-x: hidden;
+
+    /* --- KEY CHANGES END HERE --- */
+}
+
+.about-heading {
+    font-size: clamp(30px, 8vw, 40px);
+    /* Very responsive font size */
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.6;
+    max-width: 600px;
+    /* Prevents text line from being too long */
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+/* 4. Button & Link Styles (Kept consistent) */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.services {
+    font-size: 2vw;
+}
+
+.fa-solid {
+    font-size: 1.5vw;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* 5. Social Media Icons */
+.social-links {
+
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.social-links a {
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* --- Responsiveness (Media Queries) --- */
+
+/* Tablet / Portrait Screens (Below 992px) */
+@media (max-width: 992px) {
+
+    /* Balance the column widths for smaller screens */
+    .left-column {
+        flex: 1.2;
+    }
+
+    .right-column {
+        flex: 1.5;
+    }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 768px) {
+
+    .services {
+        font-size: 5vw;
+    }
+
+
+
+    header {
+        font-size: 4vw;
+        padding: 5%;
+
+    }
+
+    .fa-solid {
+        font-size: 4.5vw;
+        letter-spacing: 2px;
+    }
+
+
+    body {
+        background-size: contain;
+    }
+
+    .container {
+        /* Stacks the columns vertically */
+        flex-direction: column;
+        height: auto;
+        /* Allow content to dictate height */
+        min-height: 100vh;
+    }
+
+    .left-column,
+    .right-column {
+        padding: 20px 20px;
+        /* Fixed padding looks better on small screens */
+        justify-content: flex-start;
+        /* Reset vertical centering */
+        min-height: auto;
+    }
+
+    /* Center the right column content when stacked */
+    .right-column {
+        align-items: center;
+        text-align: center;
+
+
+    }
+
+    .about-text {
+        text-align: left;
+        /* Keep text readable, but center the block */
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}

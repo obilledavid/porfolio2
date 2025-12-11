@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: #e4e4e4;
+  background-image: url(last.png);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+header {
+  margin: 0;
+  font-size: 5vw;
+  font-family: 'Anek Gujarati', sans-serif;
+
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(62, 105, 139);
+  opacity: 0.9;
+
+
+}
+
+.reporters {
+  margin: 1%;
+  text-align: center;
+  font-size: 1.6vw;
+  font-family: 'Anek Gujarati', sans-serif;
+  font-weight: bold;
+
+
+  color: rgb(95, 95, 95);
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;   /* allow wrapping to multiple rows */
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 1500px;
+}
+
+.image-row .nameofreporters {
+  flex: 1 1 30%;     /* roughly 3 items per row */
+  max-width: 30%;    /* ensures 3 fit in first row */
+  margin: 10px;
+  text-align: center;
+}
+
+/* Ensure images scale nicely */
+.image-row img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9)
+}
+.nameofreporters {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+
+.custom-btn {
+  background-color: rgb(62, 105, 139);
+  /* Green background */
+  color: white;
+  /* White text */
+  padding: 12px 24px;
+  /* Space inside button */
+  border: none;
+  /* Remove default border */
+  border-radius: 8px;
+  /* Rounded corners */
+  font-size: 1vw;
+  /* Text size */
+  cursor: pointer;
+  /* Pointer on hover */
+  transition: all 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.custom-btn:hover {
+  background-color: #45a049;
+  /* Darker green on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
+
+

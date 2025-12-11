@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-color: #e4e4e4;
+  background-image: url(last.png);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+i
+{
+  color: white;
+  font-weight: bold;
+}
+
+header {
+  margin: 0;
+  font-size: 5vw;
+  font-family: 'Anek Gujarati', sans-serif;
+
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(62, 105, 139);
+
+
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(62, 105, 139);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+    opacity: 0.9;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Anek Gujarati', sans-serif;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  font-family: 'Anek Gujarati', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 1vw;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #45a049;
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+.reporters {
+  margin: 1%;
+  text-align: center;
+  font-size: 1.6vw;
+  font-family: 'Anek Gujarati', sans-serif;
+  font-weight: bold;
+
+
+  color: rgb(95, 95, 95);
+}
+
+.image-row {
+  /* Enables Flexbox layout */
+  display: flex;
+
+  /* Centers the items vertically */
+  align-items: center;
+
+  /* Ensures images stay in a single row */
+  flex-wrap: nowrap;
+  /* Adds some margin to the container (optional) */
+  margin: 30px auto;
+
+  /* Sets the maximum width of the row */
+  max-width: 1500px;
+  justify-content: center;
+
+}
+
+
+.image-row img {
+
+  /* The core of the layout: makes each image take up 1/5 of the available space. */
+  flex: 1;
+
+  /* Adds a small gap/spacing between the images */
+  margin: 0 10px;
+
+  /* Ensures the image fills the container space and looks good */
+  width: 350PX;
+  height: auto;
+
+  /* Ensures all pictures are displayed consistently if they have different aspect ratios */
+  object-fit: cover;
+
+  /* Fixes the height for a uniform look (optional, but recommended) */
+  height: 500px;
+
+  /* Optional: Smooth corners */
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.nameofreporters {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+
+.custom-btn {
+  background-color: rgb(62, 105, 139);
+  /* Green background */
+  color: white;
+  /* White text */
+  padding: 12px 24px;
+  /* Space inside button */
+  border: none;
+  /* Remove default border */
+  border-radius: 8px;
+  /* Rounded corners */
+  font-size: 1vw;
+  /* Text size */
+  cursor: pointer;
+  /* Pointer on hover */
+  transition: all 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.custom-btn:hover {
+  background-color: #45a049;
+  /* Darker green on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
+
+
+footer
+{
+  background-color: rgb(62, 105, 139);
+  opacity: .9;
+   text-align: center;
+   padding: 70px;
+   font-size: 1.5px;
+}
+
+a {
+  justify-content:center;
+  text-decoration: none;   /* no underline */
+  color: white;          /* use parent text color */
+  user-select: none;       /* no text highlight */
+  font-size: 1vw;
+  letter-spacing: 15px;
+}
+
+a:focus,
+a:active {
+  outline: none;           /* no focus outline */
+}
+
+
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  
+  .image-row {
+  display: flex;
+  flex-wrap: wrap;   /* allow wrapping to multiple rows */
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 1500px;
+}
+
+.image-row .nameofreporters {
+  flex: 1 1 30%;     /* roughly 3 items per row */
+  max-width: 30%;    /* ensures 3 fit in first row */
+  margin: 10px;
+  text-align: center;
+}
+
+/* Ensure images scale nicely */
+.image-row img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+ .site-header {
+    font-size: clamp(20px, 2.6vw, 32px);
+    padding: 12px 6%;
+  }
+
+  .custom-btn {
+    font-size: clamp(14px, 1vw, 16px);
+    padding: 8px 18px;
+  }
+
+  .left-column {
+    padding-top: 6vh;
+  }
+
+  .right-column {
+    padding: 4vh 4vw;
+  }
+
+  .about-text {
+    font-size: clamp(14px, 1.6vw, 18px);
+    max-width: 720px;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+   .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;   /* center items vertically */
+    align-items: center;       /* center items horizontally */
+    background-color: rgb(62, 105, 139);
+    position: fixed;           /* cover entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;               /* full width */
+    height: 100%;              /* full height */
+    padding: 0;
+    z-index: 999;              /* ensure it’s above everything */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 20px 0;            /* spacing between menu items */
+  }
+
+  .nav-links li a {
+    font-size: 6vw;            /* larger text for mobile */
+    color: white;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000;             /* keep hamburger above menu */
+  }
+
+  header {
+    font-size: 6vw;
+  }
+
+  .reporters {
+    font-size: 4vw;
+  }
+
+  .image-row .nameofreporters {
+    flex: 1 1 90%;   /* stack vertically */
+    max-width: 90%;
+  }
+  
+  .image-row img {
+    max-width: 90%;
+    /* shrink to fit screen */
+    margin: 10px 0;
+    height: auto;
+  }
+
+
+
+  body {
+    background-repeat: repeat;
+    background-size: contain;
+
+  }
+
+  .custom-btn {
+
+    font-size: 5vw;
+    /* Text size */
+    margin: 5%;
+
+  }
+    .a {
+        display:none;
+    }
+
+}

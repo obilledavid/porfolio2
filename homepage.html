@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/dolce-vita-heavy');
+        @import url('https://fonts.cdnfonts.com/css/azoft-sans');
+        @import url('https://fonts.cdnfonts.com/css/hyperion-sunset-brk');
+        @import url('https://fonts.cdnfonts.com/css/anek-gujarati');
+    </style>
+
+    <link rel="stylesheet" href="PAGE1.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">FlowPoint Collective</div>
+        <ul class="nav-links">
+            <li><i class="fa-solid fa-house"></i><a href="homepage.html"> Home</a></li>
+            <li><i class="fa-solid fa-question"></i><a href="aboutus.html"> About</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="contact.html"> Contact</a></li>
+        </ul>
+        <!-- Hamburger menu for mobile -->
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="reporters">
+        <h1> FlowPoint Collective</h1>
+    </div>
+
+    <div>
+        <div>
+            <div class="image-row">
+                <div class="nameofreporters">
+                    <img src="profile4.jpg" alt="Description of image 1">
+                    <a href="page5.html">    <button class="custom-btn">Mr. Michael Edward</button></a>
+
+                </div>
+
+                <div class="nameofreporters">
+                    <img src="profile3.jpg" alt="Description of image 1">
+                    <a href="page2..html"> <button class="custom-btn"> Ms. Maureen Giem</button> </a>
+
+                </div>
+                <div class="nameofreporters">
+                    <img src="profile2.jpg" alt="Description of image 1">
+                    <a href="page6.html">
+                        <button class="custom-btn">Mr. Jan Edan</button>
+                    </a>
+                </div>
+
+                <div class="nameofreporters">
+                    <img src="profile1.jpg" alt="Description of image 1">
+                    <a href="page3.html"><button class="custom-btn">Ms. Cleo Janica</button></a>
+
+                </div>
+
+                <div class="nameofreporters">
+                    <img src="profile5.jpg" alt="Description of image 1">
+                 <a href="page4.html">   <button class="custom-btn">Mr. John Alain</button></a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <a  class="a" href="#"><i class="fab fa-instagram">#FLOWPOINTCOLLECTIVE</i></a>
+        <br>
+        <br>
+        <a  class="a" href="#"><i class="fab fa-facebook"></i>FlowPOint CollectivePH</a>
+
+    </footer>
+</body>
+
+</html>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
